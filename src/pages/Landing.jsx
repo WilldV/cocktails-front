@@ -10,6 +10,9 @@ export default function Landing() {
       <Link to="subcategories">
         <button>Subcategories</button>
       </Link>
+      <Link to="ingredients">
+        <button>Ingredients</button>
+      </Link>
     </>
   );
 }

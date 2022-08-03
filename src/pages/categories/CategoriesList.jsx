@@ -17,7 +17,7 @@ export function CategoriesList() {
           name: "",
           description: "",
         }}
-        name="Lista de categorias"
+        name="Categories list"
         elements={categories}
         pathName="categories"
         deleteFunction={deleteCategory}

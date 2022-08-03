@@ -2,6 +2,7 @@ import { CategoriesList, CategoryForm } from "./pages/categories";
 import Landing from "./pages/Landing";
 import { SubcategoryForm, SubcategoriesList } from "./pages/subcategory";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { IngredientsForm, IngredientsList } from "./pages/ingredients";
 
 export function AppRouter() {
   return (
@@ -19,6 +20,12 @@ export function AppRouter() {
         <Route
           path="/subcategories/edit/:id"
           element={<SubcategoryForm />}
+        ></Route>
+        <Route path="/ingredients" element={<IngredientsList />}></Route>
+        <Route path="/ingredients/create" element={<IngredientsForm />}></Route>
+        <Route
+          path="/ingredients/edit/:id"
+          element={<IngredientsForm />}
         ></Route>
       </Routes>
     </BrowserRouter>
