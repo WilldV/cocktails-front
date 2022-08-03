@@ -1,13 +1,168 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.form-div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.input-group {
+  color: #333;
+  float: left;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+input {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 13px;
+  height: 33px;
+  margin: 0;
+  padding: 0 0 0 15px;
+  width: 100%;
+}
+
+select {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 13px;
+  height: 33px;
+  margin: 0;
+  padding: 0 0 0 15px;
+  width: 100%;
+}
+
+.error-message {
+  color: #cc0033;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 5px 0 0;
+}
+
+.input-group .error-message {
+  display: none;
+}
+
+/* Error Styling */
+
+.error label {
+  color: #cc0033;
+}
+
+.error input,
+.error select {
+  background-color: #fce4e4;
+  border: 1px solid #cc0033;
+  outline: none;
+}
+
+.error .error-message {
+  display: inline-block;
+}
+
+label {
+  float: left;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* The Modal (background) */
+.modal {
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: "block";
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.red-button {
+  background: red;
+  color: white;
+  padding: 1px 10px;
 }
