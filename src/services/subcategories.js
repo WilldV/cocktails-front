@@ -1,7 +1,8 @@
+import { buildParams } from "../utils";
 import { fetchApi } from "./fetchApi";
 
 export function listSubCategories(query) {
-  return fetchApi("GET", "/subcategories?" + new URLSearchParams(query));
+  return fetchApi("GET", "/subcategories?" + buildParams(query));
 }
 
 export function getSubCategoryById(id) {

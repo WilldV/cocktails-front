@@ -1,7 +1,7 @@
 import { fetchApi } from "./fetchApi";
-
+import { buildParams } from "../utils";
 export function listIngredients(query) {
-  return fetchApi("GET", "/ingredients?" + new URLSearchParams(query));
+  return fetchApi("GET", "/ingredients?" + buildParams(query));
 }
 
 export function getIngredientById(id) {

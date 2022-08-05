@@ -3,6 +3,7 @@ import Landing from "./pages/Landing";
 import { SubcategoryForm, SubcategoriesList } from "./pages/subcategory";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { IngredientsForm, IngredientsList } from "./pages/ingredients";
+import { CocktailsForm, CocktailsList } from "./pages/cocktails";
 
 export function AppRouter() {
   return (
@@ -27,6 +28,9 @@ export function AppRouter() {
           path="/ingredients/edit/:id"
           element={<IngredientsForm />}
         ></Route>
+        <Route path="/cocktails" element={<CocktailsList />}></Route>
+        <Route path="/cocktails/create" element={<CocktailsForm />}></Route>
+        <Route path="/cocktails/edit/:id" element={<CocktailsForm />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -16,18 +16,16 @@ export function SubcategoriesList() {
     id: "",
     name: "",
     description: "",
-    category: "name",
+    category: "category.name",
   };
 
   return (
-    <>
-      <Table
-        format={object}
-        name="Lista de subcategorias"
-        elements={subcategories}
-        pathName="subcategories"
-        deleteFunction={deleteSubCategory}
-      ></Table>
-    </>
+    <Table
+      format={object}
+      name="Lista de subcategorias"
+      elements={subcategories}
+      pathName="subcategories"
+      deleteFunction={deleteSubCategory}
+    ></Table>
   );
 }

@@ -1,7 +1,8 @@
+import { buildParams } from "../utils";
 import { fetchApi } from "./fetchApi";
 
 export function listCategories(query) {
-  return fetchApi("GET", "/categories?" + new URLSearchParams(query));
+  return fetchApi("GET", "/categories?" + buildParams(query));
 }
 
 export function getCategoryById(id) {

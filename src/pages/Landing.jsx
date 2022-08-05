@@ -13,6 +13,9 @@ export default function Landing() {
       <Link to="ingredients">
         <button>Ingredients</button>
       </Link>
+      <Link to="cocktails">
+        <button>Cocktails</button>
+      </Link>
     </>
   );
 }
