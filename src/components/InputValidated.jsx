@@ -17,9 +17,18 @@ export default function InputValidated({
   return (
     <>
       <div className={"input-group" + (error ? " error" : "")}>
-        <label htmlFor={id}>{formatHeader(name)}:</label>
+        {type === "hidden" ? (
+          ""
+        ) : (
+          <label htmlFor={id}>{formatHeader(name)}:</label>
+        )}
         {type === "select" ? (
-          <select id={id} name={name} value={value} onChange={onChange}>
+          <select
+            id={id}
+            name={name}
+            value={value || "Select"}
+            onChange={onChange}
+          >
             <option value="">Select</option>
             {options.map((option, i) => (
               <option value={option.id} key={"option-" + i}>
@@ -32,7 +41,7 @@ export default function InputValidated({
             id={id}
             type={type || "text"}
             name={name}
-            value={value}
+            value={value || ""}
             onChange={onChange}
           />
         )}

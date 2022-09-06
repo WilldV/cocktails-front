@@ -166,3 +166,27 @@ tr:nth-child(even) {
   color: white;
   padding: 1px 10px;
 }
+
+.subform{
+  width: 90%;
+  display: inline-block;
+  background-color: antiquewhite;
+  padding: 10px;
+  margin: 10px;
+}
+
+.subform{
+  width: 90%;
+  display: inline-block;
+  background-color: antiquewhite;
+  padding: 10px;
+  margin: 10px;
+}
+
+.subform-second{
+  width: 90%;
+  display: inline-block;
+  background-color: rgb(245, 193, 145);
+  padding: 10px;
+  margin: 10px;
+}

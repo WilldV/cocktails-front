@@ -5,8 +5,8 @@ export function listCocktails(query) {
   return fetchApi("GET", "/cocktails?" + buildParams(query));
 }
 
-export function getCocktailById(id) {
-  return fetchApi("GET", `/cocktails/${id}`);
+export function getCocktailById(id, query) {
+  return fetchApi("GET", `/cocktails/${id}?` + buildParams(query));
 }
 
 export function createCocktail(body) {
