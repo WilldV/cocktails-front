@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { formatHeader, formatValue } from "../utils";
 import ActionTD from "./ActionTD";
 
+//TODO: Change approach to accept dynamic component for TD
 export default function Table({
   format,
   name,
@@ -10,7 +11,6 @@ export default function Table({
   elements,
 }) {
   const keys = Object.keys(format || {});
-
   return (
     <>
       <h3>{name}</h3>
@@ -32,7 +32,10 @@ export default function Table({
             return (
               <tr key={"tr-" + i}>
                 {keys.map((key, j) => {
-                  const value = formatValue(element, key, format);
+                  const value =
+                    typeof format[key] == "function"
+                      ? format[key](element[key])
+                      : formatValue(element, key, format);
                   return <td key={"td-" + j}>{value}</td>;
                 })}
                 <ActionTD

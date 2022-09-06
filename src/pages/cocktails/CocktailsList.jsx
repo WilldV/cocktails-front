@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Table from "../../components/Table";
 import { deleteCocktail, listCocktails } from "../../services";
+import { stepsToString } from "../../utils";
 
 export function CocktailsList() {
   const [cocktails, setCocktails] = useState([]);
@@ -25,15 +26,19 @@ export function CocktailsList() {
     alcoholLevel: "",
     subCategory: "subCategory.name",
     category: "subCategory.category.name",
+    steps: stepsToString,
+    variation: "",
   };
 
   return (
-    <Table
-      format={object}
-      name="Cocktails list"
-      elements={cocktails}
-      pathName="cocktails"
-      deleteFunction={deleteCocktail}
-    ></Table>
+    <>
+      <Table
+        format={object}
+        name="Cocktails list"
+        elements={cocktails}
+        pathName="cocktails"
+        deleteFunction={deleteCocktail}
+      ></Table>
+    </>
   );
 }

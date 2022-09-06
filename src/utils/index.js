@@ -58,3 +58,33 @@ export function buildParams(data) {
 
   return params.toString();
 }
+
+export function cleanObject(obj) {
+  const keys = Object.keys(obj);
+
+  keys.forEach((key) => {
+    if (!obj[key]) delete obj[key];
+    else if (typeof obj[key] === "object") cleanObject(obj[key]);
+  });
+}
+
+export function stepsToString(steps) {
+  let string = "";
+  steps.forEach((step) => {
+    string += `${step.order}. ${step.preparationType}\n${step.description}\n`;
+
+    const ingredients = step.ingredientSteps.map((is, index) => {
+      return `${step.order}.${index + 1} ${is.quantity} - ${
+        is.ingredient.name
+      }\n`;
+    });
+
+    ingredients.forEach((ingredient) => {
+      string += ingredient;
+    });
+
+    string += step.finalStep ? step.finalStep + "\n" : "";
+  });
+
+  return string;
+}

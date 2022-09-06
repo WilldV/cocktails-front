@@ -30,4 +30,8 @@ export const PREPARATION_TYPES = [
     id: "MIXER_GLASS",
     name: "MIXER_GLASS",
   },
+  {
+    id: "ADD",
+    name: "ADD",
+  },
 ];
